@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(red, yellow);
+}
+
+@keyframes logo-animate {
+  from {
+    color: aqua;
+  }
+  to {
+    color: black;
+  }
+}
+#logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(245, 243, 160);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  font-size: 3rem;
+  margin-left: 1.2rem;
+  animation-name: logo-animate;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+/* -----------------------hamburger code--------------- */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  margin-right: 2rem;
+}
+.hamburger span {
+  background-color: white;
+  width: 100%;
+  height: 3px;
+}
+/* -----------------------hamburger code--------------- */
+
+.main-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+.main-header ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  transition: transform 0.5s ease-out;
+}
+.main-header ul li a:hover {
+  color: white;
+  border-radius: 4px;
+  transform: scale(2);
+}
+
+/* -----------------------side drawer code--------------- */
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#side-drawer ul li {
+  margin: 1rem;
+}
+#side-drawer a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+#side-drawer a:hover {
+  color: red;
+}
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+@media (max-width: 48rem) {
+  .main-header ul {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+}
